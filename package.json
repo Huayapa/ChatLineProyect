@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch ./server/server.js"
+    "dev": "node --watch ./server/server.js",
+    "start": "node ./server/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Josue Huayapa",
   "license": "ISC",
-  "description": "",
+  "description": "Aplicación de chat en tiempo real con soporte para mensajes privados, grupales, JWT, cookies seguras y protección contra spam simple.",
   "dependencies": {
     "@libsql/client": "^0.15.9",
     "bcrypt": "^6.0.0",
