@@ -1,0 +1,43 @@
+<dialog id="creategroup">
+  <h3>Crear grupo</h3>
+  <form id="formcreategroup">
+    <label >Nombre
+      <input type="text" name="namegroup">
+      <span id="error_namegroup"></span>
+    </label>
+    <label >Descripcion
+      <input type="text" placeholder="Explica el grupo" name="descriptiongroup">
+      <span id="error_descriptiongroup"></span>
+    </label>
+    <button type="submit" class="btnsubmit">Enviar</button>
+    <span id="submitmessage" class="messagesuccess"></span>
+  </form>
+  <form class="closemodal">
+    <button formmethod="dialog">x</button>
+  </form>
+</dialog>
+
+
+<dialog id="getgroup">
+  <h3>Grupos</h3>
+  <ul id="listgroups">
+  </ul>
+  <form class="closemodal">
+    <button formmethod="dialog">x</button>
+  </form>
+</dialog>
+
+
+<dialog id="modaluser">
+  <section id="userinfo">
+    <h3>Nombre</h3>
+    <div>
+      <p>Rol: </p>
+      <p>Últ vez:</p>
+    </div>
+    <button id="btnStartChat">Hablar</button>
+  </section>
+  <form class="closemodal">
+    <button formmethod="dialog">x</button>
+  </form>
+</dialog>

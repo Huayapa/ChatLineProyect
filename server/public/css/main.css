@@ -1,0 +1,123 @@
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: #303030;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+}
+
+body {
+  font-family:var(--font-base);
+  height: 100dvh;
+  max-height: 100dvh;
+  background-color: var(--bg-fondo);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+:root {
+  --font-base: 'Josefin Sans', sans-serif;
+  --bg-fondo: #000000;
+  --text-color: #ffffff;
+  --text-color-red: #BC2626;
+  --bg-messages: #181818;
+  --bg-fondo-secondary: #ffffff;
+  --text-color-secondary: #000000;
+  --text-color-terciary: #727272;
+  --bg-fondo-bar: #ffffff;
+  --text-color-bar: #000000;
+  --color-border: #000000;
+  --fondo-input: #D9D9D9;
+  --btn-color: #000000;
+  --btn-color-secondary: #BC2626;
+  --btn-color-terciary: #ffffff;
+  --color-status: #727272;
+  --text-sub: #606060;
+  /* COLORES  */
+  --status-primary: #26BC30;
+  --status-secondary: #BC2626;
+  --status-terciary: #727272;
+}
+
+#status {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-status);
+  border-radius: 100%;
+  &.status-online {--color-status: #26BC30;}
+  &.status-disconect {--color-status: #BC2626;}
+  &.status-ausent {--color-status:#727272;}
+}
+.statusmessage {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-status-message);
+  border-radius: 100%;
+  &.status-online {--color-status-message: #26BC30;}
+  &.status-disconect {--color-status-message: #BC2626;}
+  &.status-ausent {--color-status-message:#727272;}
+}
+
+.messageerror {
+  color: #BC2626;
+}
+.messagesuccess {
+  color: #26BC30;
+}
+
+#notify-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notify {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.3s forwards;
+}
+
+.notify.success { background-color: #28a745; }
+.notify.error { background-color: #dc3545; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

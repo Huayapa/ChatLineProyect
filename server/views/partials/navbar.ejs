@@ -1,0 +1,15 @@
+<div id="headercontent">
+  <header id="headernav">
+    <h1>Chat<span>Line</span></h1>
+    <!-- <nav aria-label="Navegación principal"></nav> -->
+    <% if (user) { %> 
+      <section class="info_user">
+        <div>
+          <p><%= user.display_name %></p>
+          <small>@<%= user.username %></small>
+        </div>
+        <div aria-label="status_connect" id="status"></div>
+      </section>
+    <%}%>
+  </header>
+</div>

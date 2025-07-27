@@ -1,0 +1,123 @@
+#creategroup, #getgroup, #modaluser {
+  width: 20rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 20px;
+  border: 0;
+  &::backdrop {
+    background-color: #00000050;
+  }
+  & h3 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  & .closemodal {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    & button {
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      border-radius: 50%;
+      background-color: var(--status-secondary);
+      color: var(--text-color);
+    }
+  }
+}
+
+#formcreategroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  & label {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color-terciary);
+    font-style: italic;
+    font-size: 1rem;
+    & input {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      margin-top: 0.3rem;
+      border-radius: 5px;
+      border: 0;
+      background-color: var(--fondo-input);
+      outline: none;
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+    
+  }
+  & button {
+    cursor: pointer;
+    max-width: min-content;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--btn-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    border: 0;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+#listgroups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 20rem;
+  overflow: hidden;
+  overflow-y: auto;
+  & .grupolist {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    border-bottom: 2px solid var(--color-border);
+    & div {
+      width: calc(100% - 4rem);
+      flex: 1;
+      & .title {
+        font-size: 1.4rem;
+      }
+      & p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0.4rem 0;
+      }
+      & small {
+        color: var(--text-color-terciary);
+        font-style: italic;
+      }
+    }
+    & button {
+      cursor: pointer;
+      width: 4rem;
+      border: 0;
+      background-color: var(--btn-color);
+      color: var(--text-color);
+    }
+  }
+}
+
+#userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & div p {
+    padding: 0.2rem 0;
+    font-size: 1rem;
+  }
+  & button {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    background-color: var(--btn-color);
+    color: var(--text-color);
+  }
+}

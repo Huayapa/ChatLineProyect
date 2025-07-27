@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/navbar') %>
+  <main id="main_auth" class="container">
+    <% if (user) { %>
+      <section class="auth_content">
+        <h2>Usted no puede loguearse otra vez</h2>
+        <a href="/chat">Ir al chat</a>
+      </section>
+    <%} else {%>
+      <section class="auth_content">
+        <h2>Iniciar Sesión</h2>
+        <form class="auth_form" id="login_form">
+          <label>Usuario
+            <input type="text" name="username">
+            <span id="usernameerror" class="messageerror"></span>
+          </label>
+          <label>Contraseña
+            <input type="password" name="password">
+            <span id="passworderror" class="messageerror"></span>
+          </label>
+          <a href="/register" class="linktopage">¿No tienes una Cuenta?</a>
+          <button type="submit" class="btnsubmit">Ingresar</button>
+          <span id="successmessage" class="messagesuccess"></span>
+        </form>
+      </section>
+    <%}%>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

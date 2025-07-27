@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/navbar') %>
+    <main id="chatcontent" class="container">
+      <section id="chatmain">
+        <article id="messagesgroups">
+          <ul id="groupsjoins">
+          </ul>
+        </article>
+        <ul id="messages">
+          <li class="msg">Disfruta conversando con las personas :D.</li>
+        </ul>
+        <form id="formmessage">
+          <div>
+            <input type="text" name="message" placeholder="Escribe tu mensaje" autocomplete="off" disabled>
+          </div>
+          <button type="submit" name="submit" disabled>Enviar</button>
+        </form>
+      </section>
+      <aside id="data-chat">
+        <section class="actionschat">
+          <div>
+            <button id="btn-creategroup">Crear grupo</button>
+            <button id="btn-getgroup">Ver grupos</button>
+          </div>
+          <button id="btn-logout" class="btn_red">Salir</button>
+        </section>
+        <section class="detailschat">
+          <small id="namegroup">Nombre grupo: Ninguno</small>
+          <!-- <p>0 conectados </p> -->
+        </section>
+        <section class="searchchat">
+          <input type="search" placeholder="Buscar Usuario" id="searchusers">
+        </section>
+        <section class="listuserchat">
+          <ul id="chatuserslist" >
+          </ul>
+        </section>
+      </aside>
+      <button id="btn-chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-icon lucide-list"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></svg>
+      </button>
+    </main>
+  <%- include('partials/modals') %>
+  <!-- MENSAJE DE NOTIFICACIONES -->
+  <div aria-label="Barra de notificaciones" id="notify-container"></div>
+  <!-- JS -->
+  <script>
+    window.SOCKET_URL = "<%= socketUrl %>";
+  </script>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

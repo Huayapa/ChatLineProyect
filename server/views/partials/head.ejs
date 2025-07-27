@@ -1,0 +1,33 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatLine</title>
+  <!-- * Optimización con preconexión -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- * Carga de Josefin Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- * Meta etiquetas -->
+  <meta name="description" content="ChatLine: chatea en tiempo real con tus amigos y grupos.">
+  <meta name="keywords" content="chat, grupos, mensajes, tiempo real, ChatLine">
+  <meta name="author" content="Josue Huayapa">
+  <meta property="og:title" content="ChatLine - Chat en tiempo real">
+  <meta property="og:description" content="Chatea en tiempo real con tus amigos y grupos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://proyectchatline.com">
+  <meta property="og:image" content="assets/chatlinelogo.png">
+  <link rel="icon" href="assets/chatlinelogo.png">
+  <!-- * CSS -->
+  <!-- Estilos globales -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/shared/header.css">
+  <!-- Estilos individuales -->
+  <% if (page === 'login') { %>
+    <link rel="stylesheet" href="css/features/auth.css">
+  <% } else if (page === 'register') { %>
+    <link rel="stylesheet" href="css/features/auth.css">
+  <% } else if (page === 'chat') { %>
+    <link rel="stylesheet" href="css/features/chat.css">
+    <link rel="stylesheet" href="css/shared/modal.css">
+  <% } %>
+</head>
